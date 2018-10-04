@@ -22,13 +22,13 @@ emails_destinatarios = {
   emails: ["email_01@acras.com.br", "email_02@acras.com.br", "email_03@acras.com.br"]
 }
 # criamos uma objeto uri para envio da nota
-uri_requisicao = URI(url_envio)
+uri = URI(url_envio)
 
 # também criamos um objeto da classe HTTP a partir do host da uri
-http = Net::HTTP.new(uri_requisicao.hostname, uri_requisicao.port)
+http = Net::HTTP.new(uri.hostname, uri.port)
 
 # aqui criamos um objeto da classe Post a partir da uri de requisição
-requisicao = Net::HTTP::Post.new(uri_requisicao.request_uri)
+requisicao = Net::HTTP::Post.new(uri.request_uri)
 
 # adicionando o token à requisição
 requisicao.basic_auth(token, '')
