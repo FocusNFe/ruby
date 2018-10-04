@@ -19,33 +19,33 @@ url_envio = servidor_homologacao + "v2/nfse?ref=" + ref
 
 # altere os campos conforme a nota que será enviada
 dados_da_nota = {  
-  "data_emissao":"2017-09-21T22:15:00",
-  "prestador":{  
-      "cnpj":"18765499000199",
-      "inscricao_municipal":"12345",
-      "codigo_municipio":"3516200"
+  data_emissao: "2017-09-21T22:15:00",
+  prestador: {  
+      cnpj: "18765499000199",
+      inscricao_municipal: "12345",
+      codigo_municipio: "3516200"
   },
-  "tomador":{  
-      "cnpj":"07504505000132",
-      "razao_social":"Acras Tecnologia da Informação LTDA",
-      "email":"contatoacras.com.br",
-      "endereco":{  
-        "logradouro":"Rua Dias da Rocha Filho",
-        "numero":"999",
-        "complemento":"Prédio 04 - Sala 34C",
-        "bairro":"Alto da XV",
-        "codigo_municipio":"4106902",
-        "uf":"PR",
-        "cep":"80045165"
+  tomador: {  
+      cnpj: "07504505000132",
+      razao_social: "Acras Tecnologia da Informação LTDA",
+      email: "contatoacras.com.br",
+      endereco: {  
+        logradouro: "Rua Dias da Rocha Filho",
+        numero: "999",
+        complemento: "Prédio 04 - Sala 34C",
+        bairro: "Alto da XV",
+        codigo_municipio: "4106902",
+        uf: "PR",
+        cep: "80045165"
       }
   },
-  "servico":{  
-      "aliquota":3,
-      "discriminacao":"Nota fiscal referente a serviços prestados",
-      "iss_retido":"false",
-      "item_lista_servico":"0107",
-      "codigo_tributario_municipio": "620910000",
-      "valor_servicos":1.0
+  servico: {  
+      aliquota: 3,
+      discriminacao: "Nota fiscal referente a serviços prestados",
+      iss_retido: "false",
+      item_lista_servico: "0107",
+      codigo_tributario_municipio: "620910000",
+      valor_servicos: 1.0
   }
 }
 

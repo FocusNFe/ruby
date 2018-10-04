@@ -19,36 +19,36 @@ url_envio = servidor_homologacao + "v2/nfce?ref=" + ref
 
 # altere os campos conforme a nota que será enviada
 dados_da_nota = {
-  "cnpj_emitente":"05953016000132",
-  "data_emissao":"2017-12-06 14:45:10",
-  "indicador_inscricao_estadual_destinatario":"9",
-  "modalidade_frete":"9",
-  "local_destino":"1",
-  "presenca_comprador":"1",
-  "natureza_operacao":"VENDA AO CONSUMIDOR",
-  "items":[
-    "numero_item":"1",
-    "codigo_ncm":"62044200",
-    "quantidade_comercial":"1.00",
-    "quantidade_tributavel":"1.00",
-    "cfop":"5102",
-    "valor_unitario_tributavel":"79.00",
-    "valor_unitario_comercial":"79.00",
-    "valor_desconto":"0.00",
-    "descricao":"NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
-    "codigo_produto":"251887",
-    "icms_origem":"0",
-    "icms_situacao_tributaria":"102",
-    "unidade_comercial":"un",
-    "unidade_tributavel":"un",
-    "valor_total_tributos":"24.29"
+  cnpj_emitente: "05953016000132",
+  data_emissao: "2017-12-06 14:45:10",
+  indicador_inscricao_estadual_destinatario: "9",
+  modalidade_frete: "9",
+  local_destino: "1",
+  presenca_comprador: "1",
+  natureza_operacao: "VENDA AO CONSUMIDOR",
+  items: [
+    numero_item: "1",
+    codigo_ncm: "62044200",
+    quantidade_comercial: "1.00",
+    quantidade_tributavel: "1.00",
+    cfop: "5102",
+    valor_unitario_tributavel: "79.00",
+    valor_unitario_comercial: "79.00",
+    valor_desconto: "0.00",
+    descricao: "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+    codigo_produto: "251887",
+    icms_origem: "0",
+    icms_situacao_tributaria: "102",
+    unidade_comercial: "un",
+    unidade_tributavel: "un",
+    valor_total_tributos: "24.29"
   ],
-  "formas_pagamento":[
-    "forma_pagamento":"03",
-    "valor_pagamento":"79.00",
-    "nome_credenciadora":"Cielo",
-    "bandeira_operadora":"02",
-    "numero_autorizacao":"R07242"
+  formas_pagamento: [
+    forma_pagamento: "03",
+    valor_pagamento: "79.00",
+    nome_credenciadora: "Cielo",
+    bandeira_operadora: "02",
+    numero_autorizacao: "R07242"
   ]
 }
 

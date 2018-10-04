@@ -2,19 +2,26 @@
 
 require "net/http"
 require "net/https"
+require "json"
 
 # token enviado pelo suporte
 token = "codigo_alfanumerico_token"
-
-# referência da nota - deve ser única para cada nota enviada
-ref = "id_referencia_nota"
 
 # endereço da api que deve ser usado conforme o ambiente: produção ou homologação
 servidor_producao = "https://api.focusnfe.com.br/"
 servidor_homologacao = "http://homologacao.acrasnfe.acras.com.br/"
 
 # no caso do ambiente de envio ser em produção, utilizar servidor_producao
-url_envio = servidor_homologacao + "v2/nfe/" + ref
+url_envio = servidor_homologacao + "v2/nfce/inutilizacao"
+
+# altere os campos conforme a nota que será enviada
+dados_inutilizacao = {  
+  cnpj: "51916585009999",
+  serie: "9",
+  numero_inicial: "7730",
+  numero_final: "7732",
+  justificativa: "Informe aqui a justificativa para realizar a inutilizacao da numeracao."
+}
 
 # criamos uma objeto uri para envio da nota
 uri = URI(url_envio)
@@ -22,11 +29,14 @@ uri = URI(url_envio)
 # também criamos um objeto da classe HTTP a partir do host da uri
 http = Net::HTTP.new(uri.hostname, uri.port)
 
-# aqui criamos um objeto da classe Get a partir da uri de requisição
-requisicao = Net::HTTP::Get.new(uri.request_uri)
+# aqui criamos um objeto da classe Post a partir da uri de requisição
+requisicao = Net::HTTP::Post.new(uri.request_uri)
 
 # adicionando o token à requisição
 requisicao.basic_auth(token, '')
+
+# convertemos a hash de justificativa do cancelamento para o formato JSON e adicionamos ao corpo da requisição
+requisicao.body = dados_inutilizacao.to_json
 
 # no envio de notas em produção, é necessário utilizar o protocolo ssl
 # para isso, basta retirar o comentário da linha abaixo

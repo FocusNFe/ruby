@@ -15,7 +15,7 @@ servidor_producao = "https://api.focusnfe.com.br/"
 servidor_homologacao = "http://homologacao.acrasnfe.acras.com.br/"
 
 # no caso do ambiente de envio ser em produção, utilizar servidor_producao
-url_envio = servidor_producao + "v2/nfce/" + ref + "/email"
+url_envio = servidor_homologacao + "v2/nfce/" + ref + "/email"
 
 # altere os campos conforme a nota que será enviada
 emails_destinatarios = {
@@ -38,7 +38,7 @@ requisicao.body = emails_destinatarios.to_json
 
 # no envio de notas em produção, é necessário utilizar o protocolo ssl
 # para isso, basta retirar o comentário da linha abaixo
-http.use_ssl = true
+# http.use_ssl = true
 
 # aqui enviamos a requisição ao servidor e obtemos a resposta
 resposta = http.request(requisicao)

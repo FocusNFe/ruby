@@ -19,7 +19,7 @@ url_envio = servidor_homologacao + "v2/nfce/" + ref
 
 # altere os campos conforme a nota que será enviada
 justificativa_cancelamento = {  
-  "justificativa": "Informe aqui a sua justificativa para realizar o cancelamento da NFSe."
+  justificativa: "Informe aqui a sua justificativa para realizar o cancelamento da NFCe."
 }
 
 # criamos uma objeto uri para envio da nota
